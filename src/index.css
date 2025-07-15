@@ -2,110 +2,151 @@
 @tailwind components;
 @tailwind utilities;
 
-/* EcoWood Design System - Natural Wood Theme */
+/* EcoWoods Premium Design System */
 
 @layer base {
   :root {
-    /* Wood & Natural Colors */
-    --kolor-bialy: 30 15% 98%;
-    --kolor-czarny: 25 8% 15%;
-    --kolor-szary-ciemny-2: 25 6% 25%;
-    --kolor-linia: 30 10% 85%;
-    --kolor-tlo-modul: 30 20% 96%;
-    --kolor-szablonu: 25 75% 45%;
+    /* Premium Wood & Natural Palette */
+    --premium-white: 30 15% 98%;
+    --premium-black: 25 8% 8%;
+    --charcoal: 25 12% 15%;
+    --warm-gray: 25 8% 45%;
+    --light-gray: 30 10% 90%;
+    --soft-cream: 35 25% 96%;
     
-    /* Wood Tones */
-    --wood-dark: 25 30% 25%;
-    --wood-medium: 30 25% 45%;
-    --wood-light: 35 25% 75%;
-    --wood-cream: 40 25% 90%;
+    /* Sophisticated Wood Tones */
+    --rich-walnut: 25 35% 18%;
+    --warm-oak: 30 28% 35%;
+    --golden-oak: 35 32% 55%;
+    --cream-oak: 40 30% 85%;
+    --pearl-white: 45 20% 97%;
     
-    /* Green Accents */
-    --sage-green: 120 15% 45%;
-    --sage-light: 120 20% 75%;
-    --sage-dark: 120 25% 35%;
+    /* Premium Green Accents */
+    --forest-green: 140 25% 28%;
+    --sage-premium: 125 18% 45%;
+    --mint-fresh: 140 35% 75%;
+    --sage-whisper: 125 25% 90%;
     
-    /* Main Design Tokens */
-    --background: var(--kolor-bialy);
-    --foreground: var(--kolor-czarny);
+    /* Luxury Accent Colors */
+    --gold-accent: 45 85% 65%;
+    --copper-accent: 15 75% 55%;
+    --bronze-accent: 25 65% 45%;
     
-    --card: var(--kolor-bialy);
-    --card-foreground: var(--kolor-czarny);
+    /* Core Design Tokens */
+    --background: var(--premium-white);
+    --foreground: var(--charcoal);
     
-    --popover: var(--kolor-bialy);
-    --popover-foreground: var(--kolor-czarny);
+    --card: var(--premium-white);
+    --card-foreground: var(--charcoal);
     
-    --primary: var(--wood-dark);
-    --primary-foreground: var(--kolor-bialy);
+    --popover: var(--premium-white);
+    --popover-foreground: var(--charcoal);
     
-    --secondary: var(--wood-light);
-    --secondary-foreground: var(--kolor-czarny);
+    --primary: var(--rich-walnut);
+    --primary-foreground: var(--premium-white);
     
-    --muted: var(--kolor-tlo-modul);
-    --muted-foreground: var(--kolor-szary-ciemny-2);
+    --secondary: var(--cream-oak);
+    --secondary-foreground: var(--charcoal);
     
-    --accent: var(--sage-green);
-    --accent-foreground: var(--kolor-bialy);
+    --muted: var(--soft-cream);
+    --muted-foreground: var(--warm-gray);
     
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: var(--kolor-bialy);
+    --accent: var(--forest-green);
+    --accent-foreground: var(--premium-white);
     
-    --border: var(--kolor-linia);
-    --input: var(--kolor-linia);
-    --ring: var(--wood-dark);
+    --destructive: 0 75% 55%;
+    --destructive-foreground: var(--premium-white);
     
-    /* Radius & Effects */
-    --zaokraglenie-4-px: 4px;
-    --zaokraglenie-5-px: 5px;
-    --radius: 0.5rem;
+    --border: var(--light-gray);
+    --input: var(--light-gray);
+    --ring: var(--forest-green);
     
-    /* Gradients */
-    --gradient-wood: linear-gradient(135deg, hsl(var(--wood-light)), hsl(var(--wood-cream)));
-    --gradient-sage: linear-gradient(135deg, hsl(var(--sage-green)), hsl(var(--sage-light)));
+    /* Premium Effects */
+    --radius: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
     
-    /* Shadows */
-    --shadow-natural: 0 4px 15px hsla(var(--wood-dark), 0.15);
-    --shadow-deep: 0 8px 30px hsla(var(--wood-dark), 0.25);
+    /* Sophisticated Gradients */
+    --gradient-hero: linear-gradient(135deg, 
+      hsl(var(--cream-oak)) 0%, 
+      hsl(var(--soft-cream)) 50%, 
+      hsl(var(--pearl-white)) 100%);
     
-    /* Filters */
-    --filtr-czerwony: brightness(0) saturate(100%) invert(22%) sepia(95%) saturate(7144%) hue-rotate(4deg) brightness(94%) contrast(118%);
+    --gradient-premium: linear-gradient(135deg, 
+      hsl(var(--rich-walnut)) 0%, 
+      hsl(var(--warm-oak)) 100%);
     
-    /* Newsletter Module */
-    --newsletter-bg: var(--gradient-wood);
+    --gradient-accent: linear-gradient(135deg, 
+      hsl(var(--forest-green)) 0%, 
+      hsl(var(--sage-premium)) 100%);
+    
+    --gradient-gold: linear-gradient(135deg, 
+      hsl(var(--gold-accent)) 0%, 
+      hsl(var(--copper-accent)) 100%);
+    
+    /* Premium Shadows */
+    --shadow-soft: 0 2px 8px hsla(var(--charcoal), 0.08);
+    --shadow-medium: 0 4px 16px hsla(var(--charcoal), 0.12);
+    --shadow-strong: 0 8px 32px hsla(var(--charcoal), 0.16);
+    --shadow-luxury: 0 16px 64px hsla(var(--charcoal), 0.20);
+    
+    /* Glass Effect */
+    --glass-bg: hsla(var(--premium-white), 0.85);
+    --glass-border: hsla(var(--light-gray), 0.5);
+    
+    /* Premium Typography Scale */
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
+    --font-size-5xl: 3rem;
+    
+    /* Spacing Scale */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+    --space-3xl: 4rem;
     
     /* Sidebar */
-    --sidebar-background: var(--wood-cream);
-    --sidebar-foreground: var(--kolor-czarny);
-    --sidebar-primary: var(--wood-dark);
-    --sidebar-primary-foreground: var(--kolor-bialy);
-    --sidebar-accent: var(--wood-light);
-    --sidebar-accent-foreground: var(--kolor-czarny);
-    --sidebar-border: var(--kolor-linia);
-    --sidebar-ring: var(--sage-green);
+    --sidebar-background: var(--soft-cream);
+    --sidebar-foreground: var(--charcoal);
+    --sidebar-primary: var(--rich-walnut);
+    --sidebar-primary-foreground: var(--premium-white);
+    --sidebar-accent: var(--cream-oak);
+    --sidebar-accent-foreground: var(--charcoal);
+    --sidebar-border: var(--light-gray);
+    --sidebar-ring: var(--forest-green);
   }
 
   .dark {
-    --background: var(--kolor-czarny);
-    --foreground: var(--kolor-bialy);
-    --card: var(--wood-dark);
-    --card-foreground: var(--kolor-bialy);
-    --popover: var(--wood-dark);
-    --popover-foreground: var(--kolor-bialy);
-    --primary: var(--wood-light);
-    --primary-foreground: var(--kolor-czarny);
-    --secondary: var(--wood-medium);
-    --secondary-foreground: var(--kolor-bialy);
-    --muted: var(--wood-medium);
-    --muted-foreground: var(--wood-light);
-    --accent: var(--sage-light);
-    --accent-foreground: var(--kolor-czarny);
-    --border: var(--wood-medium);
-    --input: var(--wood-medium);
-    --ring: var(--sage-light);
+    --background: var(--premium-black);
+    --foreground: var(--soft-cream);
+    --card: var(--charcoal);
+    --card-foreground: var(--soft-cream);
+    --popover: var(--charcoal);
+    --popover-foreground: var(--soft-cream);
+    --primary: var(--cream-oak);
+    --primary-foreground: var(--premium-black);
+    --secondary: var(--warm-oak);
+    --secondary-foreground: var(--soft-cream);
+    --muted: var(--warm-oak);
+    --muted-foreground: var(--cream-oak);
+    --accent: var(--mint-fresh);
+    --accent-foreground: var(--premium-black);
+    --border: var(--warm-oak);
+    --input: var(--warm-oak);
+    --ring: var(--mint-fresh);
   }
 }
 
-/* EcoWood Base Styles */
+/* Premium Base Styles */
 @layer base {
   * {
     @apply border-border;
@@ -114,43 +155,130 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
     font-family: 'Inter', system-ui, sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
   
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
     font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
   }
 }
 
-/* Newsletter Module Styles */
+/* Premium Component Styles */
+@layer components {
+  /* Glass Effects */
+  .glass {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+  
+  /* Premium Gradients */
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-premium {
+    background: var(--gradient-premium);
+  }
+  
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+  
+  .gradient-gold {
+    background: var(--gradient-gold);
+  }
+  
+  /* Premium Shadows */
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .shadow-strong {
+    box-shadow: var(--shadow-strong);
+  }
+  
+  .shadow-luxury {
+    box-shadow: var(--shadow-luxury);
+  }
+  
+  /* Premium Cards */
+  .premium-card {
+    @apply bg-card rounded-xl border shadow-medium backdrop-blur-sm;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+  }
+  
+  /* Premium Buttons */
+  .premium-button {
+    @apply px-8 py-4 rounded-xl font-medium transition-all duration-300;
+    background: var(--gradient-premium);
+    color: hsl(var(--primary-foreground));
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .premium-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-strong);
+  }
+  
+  /* Premium Typography */
+  .premium-heading {
+    @apply text-6xl font-bold leading-tight;
+    background: var(--gradient-premium);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .premium-subheading {
+    @apply text-2xl font-semibold text-foreground/80;
+  }
+}
+
+/* Newsletter Module Premium Styles */
 .ModulNewsletter {
-  border: 1px solid hsl(var(--border));
-  background: hsl(var(--muted));
-  line-height: 1.5;
-  margin: 10px 0 20px 0;
-  padding: 15px;
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  line-height: 1.6;
+  margin: var(--space-lg) 0 var(--space-xl) 0;
+  padding: var(--space-xl);
   text-align: center;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-medium);
 }
 
 .ModulNewsletter strong {
   background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>') no-repeat left center;
-  background-size: 50px 42px;
-  padding: 8px 0 5px 60px;
+  background-size: 60px 50px;
+  padding: var(--space-md) 0 var(--space-sm) 70px;
   display: inline-block;
-  font-size: 250%;
+  font-size: var(--font-size-3xl);
   text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: hsl(var(--accent));
 }
 
 @media only screen and (max-width: 799px) {
   .ModulNewsletter strong {
-    font-size: 180%;
-    background-size: 80px 50px;
+    font-size: var(--font-size-2xl);
+    background-size: 90px 60px;
     background-position: top center;
-    padding: 60px 0 0 0;
+    padding: 70px 0 0 0;
   }
 }
 
-/* Banner Popup Styles */
+/* Premium Popup Styles */
 #TloPopUp {
   display: none;
   position: fixed;
@@ -160,10 +288,11 @@
   height: 100%;
   z-index: 10001;
   color: hsl(var(--foreground));
+  backdrop-filter: blur(8px);
 }
 
 .TloPopUpCiemne {
-  background: rgba(0, 0, 0, 0.82);
+  background: hsla(var(--premium-black), 0.75);
 }
 
 #PopUpZawartosc {
@@ -176,8 +305,8 @@
 
 @media only screen and (max-width: 799px) {
   #PopUpZawartosc {
-    width: 80%;
-    max-height: 80%;
+    width: 90%;
+    max-height: 85%;
     overflow-y: auto;
   }
 }
@@ -187,27 +316,33 @@
   vertical-align: top;
   position: relative;
   overflow: visible;
-  background: hsl(var(--background));
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
   color: hsl(var(--foreground));
-  padding: 40px 20px 20px 20px;
-  line-height: 1.5;
-  border-radius: var(--zaokraglenie-4-px);
-  box-shadow: var(--shadow-deep);
+  padding: var(--space-2xl) var(--space-xl) var(--space-xl) var(--space-xl);
+  line-height: 1.6;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-luxury);
+  border: 1px solid var(--glass-border);
 }
 
-/* Wood texture utilities */
-.wood-texture {
-  background: var(--gradient-wood);
-}
-
-.sage-accent {
-  background: var(--gradient-sage);
-}
-
-.natural-shadow {
-  box-shadow: var(--shadow-natural);
-}
-
-.deep-shadow {
-  box-shadow: var(--shadow-deep);
+/* Premium Animations */
+@layer utilities {
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes glow {
+    from { box-shadow: var(--shadow-medium); }
+    to { box-shadow: var(--shadow-luxury); }
+  }
 }

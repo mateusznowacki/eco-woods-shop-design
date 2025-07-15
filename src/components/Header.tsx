@@ -4,20 +4,22 @@ import { Input } from "@/components/ui/input";
 
 const Header = () => {
   return (
-    <header className="bg-white shadow-sm border-b border-border">
+    <header className="glass border-b border-border/50 sticky top-0 z-50">
       {/* Top bar with contact info */}
-      <div className="bg-muted py-2">
+      <div className="bg-primary/5 backdrop-blur-sm py-3">
         <div className="container mx-auto px-4 flex justify-between items-center text-sm text-muted-foreground">
-          <div className="flex items-center space-x-4">
-            <span className="flex items-center">
-              <Phone className="w-4 h-4 mr-1" />
+          <div className="flex items-center space-x-6">
+            <span className="flex items-center font-medium">
+              <Phone className="w-4 h-4 mr-2 text-accent" />
               +48 123 456 789
             </span>
-            <span>email@ecowoods.pl</span>
+            <span className="hidden md:block">kontakt@ecowoods.pl</span>
           </div>
-          <div className="flex items-center space-x-4">
-            <span>Darmowa dostawa od 500 zł</span>
-            <Button variant="ghost" size="sm" className="text-xs">
+          <div className="flex items-center space-x-6">
+            <span className="hidden sm:block font-medium text-accent">
+              ✨ Darmowa dostawa od 500 zł
+            </span>
+            <Button variant="ghost" size="sm" className="text-xs hover:bg-accent/10 hover:text-accent transition-colors">
               <User className="w-4 h-4 mr-1" />
               Moje konto
             </Button>
@@ -26,34 +28,44 @@ const Header = () => {
       </div>
 
       {/* Main header */}
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 py-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center">
-            <h1 className="text-3xl font-bold text-primary">
-              EcoWoods
-            </h1>
-            <span className="text-sm text-muted-foreground ml-2">
-              Naturalnie piękne
-            </span>
+          <div className="flex items-center space-x-3">
+            <div className="w-12 h-12 rounded-xl gradient-premium flex items-center justify-center shadow-medium">
+              <span className="text-2xl text-primary-foreground font-bold">E</span>
+            </div>
+            <div>
+              <h1 className="text-3xl font-bold text-primary tracking-tight">
+                EcoWoods
+              </h1>
+              <span className="text-sm text-accent font-medium tracking-wide">
+                Naturalnie Piękne
+              </span>
+            </div>
           </div>
 
           {/* Search bar */}
-          <div className="flex-1 max-w-2xl mx-8">
+          <div className="flex-1 max-w-2xl mx-8 hidden md:block">
             <div className="relative">
               <Input 
-                placeholder="Szukaj produktów..." 
-                className="pr-10 bg-muted/50"
+                placeholder="Szukaj produktów, kategorii..." 
+                className="pl-4 pr-12 py-3 bg-muted/30 border-border/50 rounded-xl focus:ring-2 focus:ring-accent/20 transition-all"
               />
-              <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+              <Button 
+                size="sm" 
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 h-8 w-8 p-0 gradient-accent rounded-lg"
+              >
+                <Search className="w-4 h-4" />
+              </Button>
             </div>
           </div>
 
           {/* Cart and menu */}
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" size="sm" className="relative">
+            <Button variant="ghost" size="sm" className="relative hover:bg-accent/10 transition-colors">
               <ShoppingCart className="w-5 h-5" />
-              <span className="absolute -top-2 -right-2 bg-accent text-accent-foreground text-xs rounded-full w-5 h-5 flex items-center justify-center">
+              <span className="absolute -top-2 -right-2 bg-accent text-accent-foreground text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium shadow-medium">
                 0
               </span>
             </Button>
@@ -65,33 +77,22 @@ const Header = () => {
       </div>
 
       {/* Navigation menu */}
-      <nav className="bg-primary text-primary-foreground">
+      <nav className="gradient-premium text-primary-foreground shadow-medium">
         <div className="container mx-auto px-4">
-          <div className="flex items-center space-x-8 py-3">
-            <Button variant="ghost" className="text-primary-foreground hover:bg-primary-foreground/10">
-              Kategorie
-            </Button>
-            <Button variant="ghost" className="text-primary-foreground hover:bg-primary-foreground/10">
-              Stoły
-            </Button>
-            <Button variant="ghost" className="text-primary-foreground hover:bg-primary-foreground/10">
-              Krzesła
-            </Button>
-            <Button variant="ghost" className="text-primary-foreground hover:bg-primary-foreground/10">
-              Szafy
-            </Button>
-            <Button variant="ghost" className="text-primary-foreground hover:bg-primary-foreground/10">
-              Komody
-            </Button>
-            <Button variant="ghost" className="text-primary-foreground hover:bg-primary-foreground/10">
-              Łóżka
-            </Button>
-            <Button variant="ghost" className="text-primary-foreground hover:bg-primary-foreground/10">
-              Promocje
-            </Button>
-            <Button variant="ghost" className="text-primary-foreground hover:bg-primary-foreground/10 text-accent">
-              Nowości
-            </Button>
+          <div className="flex items-center space-x-1 py-4">
+            {[
+              "Kategorie", "Stoły", "Krzesła", "Szafy", "Komody", "Łóżka", "Promocje", "Nowości"
+            ].map((item, index) => (
+              <Button 
+                key={item}
+                variant="ghost" 
+                className={`text-primary-foreground hover:bg-primary-foreground/15 px-4 py-2 rounded-lg transition-all ${
+                  item === "Nowości" ? "gradient-gold text-primary font-semibold" : ""
+                } ${index === 0 ? "font-semibold" : ""}`}
+              >
+                {item}
+              </Button>
+            ))}
           </div>
         </div>
       </nav>
